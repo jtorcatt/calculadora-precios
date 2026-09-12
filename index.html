@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#102b29" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Balanza" />
+  <link rel="manifest" href="data:application/manifest+json,{&quot;name&quot;:&quot;Balanza&quot;,&quot;short_name&quot;:&quot;Balanza&quot;,&quot;start_url&quot;:&quot;.&quot;,&quot;display&quot;:&quot;standalone&quot;,&quot;background_color&quot;:&quot;%23102b29&quot;,&quot;theme_color&quot;:&quot;%23102b29&quot;,&quot;icons&quot;:[]}" />
+  <title>Balanza · Calculadora bimoneda</title>
+  <style>
+    :root{--ink:#142321;--muted:#6e7f7b;--paper:#f4f5ef;--card:#fffefa;--line:#e5e9e3;--forest:#102b29;--forest-2:#1c4942;--forest-light:#276b5c;--mint:#d9f1dc;--mint-strong:#a7dbb2;--yellow:#f1c86b;--red:#d76050;--shadow:0 14px 34px rgba(16,43,41,.1)}
+    *{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}body{padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}button,input{font:inherit}button{cursor:pointer;border:0}main{max-width:900px;margin:0 auto;padding:14px 14px 18px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:12px}.brand{display:flex;align-items:center;gap:10px}.mark{width:34px;height:34px;border-radius:11px;background:var(--forest);display:grid;place-items:center;box-shadow:0 6px 14px rgba(16,43,41,.16)}.mark svg{width:18px;color:#d9f1dc}h1,h2,h3,p{margin:0}h1{font-size:17px;letter-spacing:-.03em}.top-actions{display:flex;gap:10px;align-items:center}.offline-pill{display:flex;gap:7px;align-items:center;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:9px 13px;color:var(--muted);font-size:12px;font-weight:700}.dot{width:7px;height:7px;border-radius:99px;background:#56a769;box-shadow:0 0 0 4px #e4f4e5}.icon-btn{width:34px;height:34px;border-radius:11px;background:var(--card);border:1px solid var(--line);display:grid;place-items:center;color:var(--forest)}.hero{display:flex;justify-content:space-between;gap:24px;align-items:flex-end;margin-bottom:10px}.rate-card{background:var(--forest-light);color:#fff;border-radius:16px;padding:10px 14px;min-width:205px;width:100%;box-shadow:var(--shadow)}.rate-label{font-size:10px;color:#cfe6dd;font-weight:700;text-transform:uppercase;letter-spacing:.08em}.rate-row{display:flex;align-items:center;gap:8px;margin-top:2px}.rate-row span{font-size:19px;font-weight:900}.rate-input{width:100px;background:transparent;border:0;border-bottom:1px solid #7ea298;color:#fff;font-size:19px;font-weight:900;outline:none}.dashboard{display:grid;grid-template-columns:1fr;gap:10px}.panel{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}.calc-panel{padding:12px}.panel-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px}.panel-head h3{font-size:14px;letter-spacing:-.02em}.price-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:7px}.price-grid:last-child{margin-bottom:0}.price-grid.price-grid-3{grid-template-columns:repeat(3,1fr)}.price-card.wide{grid-column:1/-1}.price-card{padding:9px 7px;border:1px solid var(--line);border-radius:13px}.price-card.primary{background:var(--forest-light);color:#fff;border-color:var(--forest-light)}.price-card span{font-size:10px;font-weight:700;color:var(--muted);line-height:1.15}.price-card.primary span{color:#d3e9e2}.price-card strong{display:block;font-size:18px;letter-spacing:-.04em;margin-top:5px}.price-grid-3 .price-card{padding:8px 6px}.price-grid-3 .price-card span{font-size:10.5px;letter-spacing:-.005em;font-stretch:condensed}.price-grid-3 .price-card strong{font-size:28px;letter-spacing:-.03em;margin-top:3px;font-stretch:condensed}.edit-panel{padding:12px}.edit-panel h3{font-size:14px;margin-bottom:8px}.form-grid{display:grid;gap:7px}.field label{display:block;font-size:10px;font-weight:800;color:var(--muted);margin:0 0 3px 2px}.field input{width:100%;border:1px solid var(--line);border-radius:10px;background:#fbfcf9;padding:8px 9px;color:var(--ink);outline:none;font-size:16px;font-weight:700}.field input:focus,.rate-input:focus{border-color:var(--mint-strong);box-shadow:0 0 0 3px rgba(167,219,178,.25)}.two-fields{display:grid;grid-template-columns:1fr 1fr;gap:7px}@media(max-width:800px){main{padding:12px 12px 16px}.topbar{margin-bottom:10px}.offline-pill{display:none}.hero{display:block}.rate-card{width:100%}.dashboard{grid-template-columns:1fr}.price-grid{grid-template-columns:1fr 1fr}}@media(max-width:470px){.calc-panel{padding:10px}.price-card strong{font-size:16px}.price-grid-3 .price-card strong{font-size:13px}.price-grid-3 .price-card span{font-size:8px}}
+  </style>
+  <meta property="og:image" content="https://bolt.new/static/og_default.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://bolt.new/static/og_default.png">
+</head>
+<body>
+  <main>
+    <header class="topbar">
+      <div class="brand"><div class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V5m0 14h16M7 16l3-4 3 2 5-7"/></svg></div><div><h1>Calculadora de Precios</h1></div></div>
+      <div class="top-actions"><div class="offline-pill"><i class="dot"></i>Modo offline listo</div><button class="icon-btn" id="installBtn" title="Instalar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/></svg></button></div>
+    </header>
+    <section id="calculator">
+      <div class="hero"><div class="rate-card"><div class="rate-label">Tasa de cambio · USD / Bs</div><div class="rate-row"><span>Bs</span><input class="rate-input" id="rateInput" type="number" min="0.01" step="0.01" value="813.74" aria-label="Tasa de cambio" /></div></div></div>
+      <div class="dashboard">
+        <div class="panel edit-panel"><h3>Calculadora</h3><div class="form-grid"><div class="two-fields"><div class="field"><label for="packCostInput">Precio por bulto en $</label><input id="packCostInput" type="number" min="0" step="0.01" placeholder="18.00" /></div><div class="field"><label for="packCostBsInput">Precio por bulto en Bs</label><input id="packCostBsInput" type="number" min="0" step="0.01" placeholder="14652.00" /></div></div><div class="two-fields"><div class="field"><label for="unitsInput">Unidades / empaque</label><input id="unitsInput" type="number" min="1" step="1" placeholder="36" /></div><div class="field"><label for="profitInput">Ganancia (%)</label><input id="profitInput" type="number" min="0" step="0.1" placeholder="50" /></div></div><p style="font-size:11px;color:var(--muted);margin:2px 2px 0">IVA incluido: 16% (fijo)</p></div></div>
+        <div class="panel calc-panel"><div class="panel-head"><h3>Totales</h3></div><div class="price-grid price-grid-3"><div class="price-card primary"><span>Venta por und</span><strong id="saleUnitUsd">$0.00</strong></div><div class="price-card"><span>Precio en Bs para la venta</span><strong id="individualBsSale">Bs 0.00</strong></div><div class="price-card"><span>Costo unitario</span><strong id="costUnit">$0.00</strong></div></div><div class="price-grid"><div class="price-card"><span>Precio individual en Bs sin IVA</span><strong id="individualBs">Bs 0.00</strong></div><div class="price-card"><span>Precio por bulto en Bs sin IVA</span><strong id="packBs">Bs 0.00</strong></div><div class="price-card"><span>Precio individual en Bs con IVA</span><strong id="individualBsVat">Bs 0.00</strong></div><div class="price-card"><span>Precio por bulto en Bs Con IVA</span><strong id="packBsVat">Bs 0.00</strong></div></div></div>
+      </div>
+    </section>
+  </main>
+  <script>
+  (()=>{
+    const KEY='balanza-product-v1',RATE_KEY='balanza-rate-v1';
+    let product=JSON.parse(localStorage.getItem(KEY)||'null')||{packCost:18,units:36,vat:16,profit:50};
+    let rate=Number(localStorage.getItem(RATE_KEY)||'813.74'),installEvent=null;
+    const $=s=>document.querySelector(s);
+    const money=(n,c='$')=>c+' '+Number(n||0).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+    const bs=n=>'Bs '+Number(n||0).toLocaleString('es-VE',{minimumFractionDigits:2,maximumFractionDigits:2});
+    const save=()=>localStorage.setItem(KEY,JSON.stringify(product));
+
+    function calculate(){
+      const p=product;
+      if(!p.packCost||!p.units){
+        ['costUnit','saleUnitUsd','individualBs','packBs','individualBsVat','packBsVat','individualBsSale'].forEach(id=>$('#'+id).textContent=id.includes('Bs')?'Bs 0.00':'$0.00');
+        return;
+      }
+      const unit=p.packCost/p.units,saleUnit=unit*(1+p.profit/100),individualBsValue=(rate*unit)/1.16,individualBsVatValue=rate*unit;
+      $('#costUnit').textContent=money(unit);
+      $('#saleUnitUsd').textContent=money(saleUnit);
+      $('#individualBs').textContent=bs(individualBsValue);
+      $('#packBs').textContent=bs(individualBsValue*p.units);
+      $('#individualBsVat').textContent=bs(individualBsVatValue);
+      $('#packBsVat').textContent=bs(individualBsVatValue*p.units);
+      $('#individualBsSale').textContent=bs(individualBsVatValue*(1+p.profit/100));
+    }
+
+    function fillForm(){
+      $('#packCostInput').value=product.packCost??'';
+      $('#packCostBsInput').value=(product.packCost!=null&&rate)?(product.packCost*rate/1.16).toFixed(2):'';
+      $('#unitsInput').value=product.units??'';
+      $('#profitInput').value=product.profit??'';
+    }
+
+    $('#rateInput').value=rate;
+    $('#rateInput').addEventListener('input',e=>{
+      rate=Math.max(0,Number(e.target.value)||0);
+      localStorage.setItem(RATE_KEY,String(rate));
+      calculate();
+      const usd=Number($('#packCostInput').value)||0;
+      if(usd&&rate)$('#packCostBsInput').value=(usd*rate/1.16).toFixed(2);
+    });
+    $('#packCostInput').addEventListener('input',e=>{
+      const usd=Number(e.target.value)||0;
+      $('#packCostBsInput').value=usd&&rate?(usd*rate/1.16).toFixed(2):'';
+      product.packCost=usd;save();calculate();
+    });
+    $('#packCostBsInput').addEventListener('input',e=>{
+      const bsVal=Number(e.target.value)||0;
+      const usd=bsVal&&rate?(bsVal/rate*1.16):0;
+      $('#packCostInput').value=usd?usd.toFixed(2):'';
+      product.packCost=usd;save();calculate();
+    });
+    $('#unitsInput').addEventListener('input',e=>{
+      product.units=Number(e.target.value)||0;save();calculate();
+    });
+    $('#profitInput').addEventListener('input',e=>{
+      product.profit=Number(e.target.value)||0;save();calculate();
+    });
+
+    window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();installEvent=e;$('#installBtn').style.display='grid'});
+    $('#installBtn').addEventListener('click',async()=>{
+      if(!installEvent){alert('En iPhone: comparte y elige “Añadir a pantalla de inicio”');return}
+      installEvent.prompt();installEvent=null;
+    });
+
+    const sw='const CACHE="balanza-shell-v2";self.addEventListener("install",e=>{self.skipWaiting()});self.addEventListener("activate",e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))));self.clients.claim()});self.addEventListener("fetch",e=>{if(e.request.method==="GET")e.respondWith(fetch(e.request).then(res=>{const copy=res.clone();caches.open(CACHE).then(c=>c.put(e.request,copy));return res}).catch(()=>caches.match(e.request)))})';
+    if('serviceWorker' in navigator)try{navigator.serviceWorker.register(URL.createObjectURL(new Blob([sw],{type:'text/javascript'})))}catch(e){}
+
+    fillForm();
+    calculate();
+  })();
+  </script>
+</body></html>
